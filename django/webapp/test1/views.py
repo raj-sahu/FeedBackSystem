@@ -1,18 +1,31 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from test1.forms import UserProfileInfoForm, UserForm
+from test1.forms import UserProfileInfoForm, UserForm,Ratings
 
-from test1.models import Question
+from test1.models import Question,UserProfileInfo
 
 from django.contrib.auth import authenticate, login, logout
 from django.http import HttpResponseRedirect, HttpResponse
 from django.urls import reverse
 from django.contrib.auth.decorators import login_required # login decorator that makes it easier
 
+global curr_user
 
 def index(request):
-    #return HttpResponse("THALIAVA")
-    return render(request,'index.html',context={'element':"HI"})
+    if request.method == "POST":
+        form = Ratings(request.POST)
+        if form.is_valid():
+            post = form.save(commit=False)
+            post.user_rated = request.user
+            post.save()
+            return HttpResponseRedirect(reverse('index'))
+    else:
+        form=Ratings()
+
+    lis =Question.objects.order_by("question_text")
+    dic = {"QUESTIONS": lis}
+    return render(request,'index.html',{'form': form})
+
 def review(request):
     lis=Question.objects.order_by("question_text")
     dic={"QUESTIONS":lis}
@@ -95,7 +108,6 @@ def user_login(request):
     if request.method == 'POST':
         username = request.POST.get('username') #this get will grab it from the HTML
         password = request.POST.get('password')
-
         user = authenticate(username=username, password=password) #user is a boolean that tells us if it is authenticated or not
         if user:
             if user.is_active:
@@ -106,6 +118,6 @@ def user_login(request):
         else:
             print("LOGIN FAILED!")
             print("Username: {} and password {}".format(username, password))
-            return HttpResponse("Invalid login details supplied!")
+            return HttpResponse("Invalid login details supplied!Username: {} and password {}".format(username, password))
     else:
         return render(request,'login.html',{})

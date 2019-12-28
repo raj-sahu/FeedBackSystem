@@ -1,7 +1,6 @@
-from django import forms
 from django.contrib.auth.models import User
-from test1.models import UserProfileInfo
-
+from test1.models import UserProfileInfo,Rating
+from django import forms
 
 class UserForm(forms.ModelForm):
     password = forms.CharField(widget=forms.PasswordInput())
@@ -14,3 +13,10 @@ class UserProfileInfoForm(forms.ModelForm):
     class Meta():
         model = UserProfileInfo
         fields = ('portfolio_site', 'profile_pic')
+
+class Ratings(forms.ModelForm):
+    choices=[(1,"1"),(2,'2'),(3,'3'),(4,'4'),(5,'5')]
+    rate=forms.IntegerField(label="", widget=forms.RadioSelect(choices=choices))
+    class Meta():
+        model=Rating
+        fields = ('question','feedback',)

@@ -1,8 +1,10 @@
 {% extends "base.html" %}
 {% block body_block %}
 
+
+
 <div class="jumbotron">
-  <h1>Please Login</h1>
+  <h1 >Please Login</h1>
   <form action="{% url 'user_login' %}" method="POST">
     {% csrf_token %}
     <label for="username">Username: </label>
@@ -17,3 +19,6 @@
 </div>
 
 {% endblock %}
+
+
+

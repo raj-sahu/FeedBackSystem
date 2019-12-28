@@ -1,0 +1,58 @@
+ #k{
+
+    background-image:url("/static/images/bg1.jpg");
+    color:whitesmoke;
+    border:3px solid ghostwhite;
+    width:40%;
+    height:auto;
+    text-align:center;
+    margin:100px 350px;
+    padding: 30px;
+    position:center;
+    border-radius: 20px;
+    font-family: 'Gloria Hallelujah', cursive;
+    font-size: 2.9em;
+}
+.login input[type = "text"],.login input[type = "password"]
+{font-family: 'Gloria Hallelujah', cursive;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  border: 2px solid #B8BAC8;
+  padding: 9px 20px;
+  width: 250px;
+  border-radius: 25px;
+  transition: 0.20s;
+  cursor: pointer;
+  color:gray;
+
+}
+.login input[type = "text"]:focus,.login input[type = "password"]:focus
+{
+  width: 280px;
+  border-color: #0B53F7;
+  background: #0B53F7;
+font-family: 'Gloria Hallelujah', cursive;
+
+}
+.login input[type = "submit"],.login input[type = "reset"]{
+  color:gray;
+  text-align: center;
+  border: 2px solid #3C4F76;
+  padding: 14px 20px;
+font-size: 0.9em;
+  border-radius: 20px;
+  transition: 0.25s;
+  cursor: pointer;
+font-family: 'Gloria Hallelujah', cursive;
+}
+.login input[type = "submit"]:hover,.login input[type = "reset"]:hover,.login input[type = "submit"]:focus,.login input[type = "reset"]:focus
+{
+    background: #0B53F7;
+}
+ .containered {
+  height: 100vh;
+   overflow: hidden;
+   background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+  filter: drop-shadow(0 0 10px white);
+}

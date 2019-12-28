@@ -1,8 +1,66 @@
 {% extends "base.html" %}
 {% block body_block %}
+{% if user.is_authenticated %}
+<div color="#FEFEFE" style="font-family: 'Gloria Hallelujah', cursive;"  >
 
-<div class="jumbotron">
-  <h1>Django Level Five!</h1>
+    <h1 align="center">Please Fill Your Responses: </h1>
+   <form method="POST" class="post-form">{% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="save btn btn-default">Save</button>
+    </form>
+
+
+
+    <!--{% if QUESTIONS %}-->
+      <!--<table bgcolor="aqua" border="2px solid black"-->
+        <!--align="center" height="500px" width="500px">-->
+         <!--<thead>-->
+          <!--<th>Questions:</th>-->
+          <!--<th>Ratings</th>-->
+         <!--</thead>-->
+
+        <!--{% for user in QUESTIONS %}-->
+                 <!--<tr>-->
+                <!--<td>{{ user.question_text }}</td>-->
+                <!--<td align="center">{{ user.ratings }}</td>-->
+                     <!--</tr>-->
+
+      <!--{% endfor %}-->
+      <!--</table>-->
+    <!--{% endif %}-->
+
+<!--<div class="form-check" >-->
+  <!--<input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>-->
+  <!--<label class="form-check-label" for="exampleRadios1">-->
+    <!--Default radio-->
+  <!--</label>-->
+<!--</div>-->
+<!--<div class="form-check">-->
+  <!--<input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">-->
+  <!--<label class="form-check-label" for="exampleRadios2">-->
+    <!--Second default radio-->
+  <!--</label>-->
+<!--</div>-->
+<!--<div class="form-check">-->
+  <!--<input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3" disabled>-->
+  <!--<label class="form-check-label" for="exampleRadios3">-->
+    <!--Disabled radio-->
+  <!--</label>-->
+<!--</div>-->
 </div>
 
+
+
+{% else %}
+<form action="{% url 'user_login' %}" class="login" method="post" >
+    {% csrf_token %}
+    <h1 id="k">Login<br>
+     <input type="text" placeholder="Username" name="username">
+    <input type="password" placeholder="Password" name="password" >
+
+    <input type="submit" value="Login">
+    <input type="reset" value="Reset">
+    </h1>
+</form>
+{% endif %}
 {% endblock %}
