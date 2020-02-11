@@ -1,3 +1,4 @@
+
 # Rating System
 
 It is a Web App for Recording Ratings and FeedBack Provided By Users using A Group Of Products and Services.
@@ -50,7 +51,7 @@ open browser and go to [http://localhost:8000/](http://localhost:8000/) to go to
 ![response page](images/register2.png)
 
 ---
-##ADMIN SITE
+## ADMIN SITE
 if you are an admin you can go to admin site
 ![response page](images/register3.png)
 
@@ -81,7 +82,7 @@ if you are an admin you can go to admin site
 >one can logout of the site through logout button in navigation bar. 
 ---
 
-##Technology Used to Build
+## Technology Used to Build
 
 
 - Html
@@ -92,15 +93,3 @@ if you are an admin you can go to admin site
 
 ---
 
-##References
-
-I refered many websites and tutorials while making thyis project some of them are :
-
-- https://tutorial.djangogirls.org/
-
-- www.djangoproject.com
-
-- https://www.w3schools.com/
-
----
-This Project was made by Raj Sahu (VT20193819).
