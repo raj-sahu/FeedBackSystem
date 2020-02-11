@@ -50,7 +50,7 @@ open browser and go to [http://localhost:8000/](http://localhost:8000/) to go to
 ![response page](images/register2.png)
 
 ---
-##ADMIN SITE
+## ADMIN SITE
 if you are an admin you can go to admin site
 ![response page](images/register3.png)
 
