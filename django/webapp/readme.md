@@ -92,15 +92,3 @@ if you are an admin you can go to admin site
 
 ---
 
-##References
-
-I refered many websites and tutorials while making thyis project some of them are :
-
-- https://tutorial.djangogirls.org/
-
-- www.djangoproject.com
-
-- https://www.w3schools.com/
-
----
-This Project was made by Raj Sahu (VT20193819).
