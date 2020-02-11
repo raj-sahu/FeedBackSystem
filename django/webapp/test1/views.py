@@ -12,6 +12,7 @@ from django.contrib.auth.decorators import login_required # login decorator that
 global curr_user
 
 def index(request):
+
     if request.method == "POST":
         form = Ratings(request.POST)
         if form.is_valid():
@@ -23,11 +24,11 @@ def index(request):
         form=Ratings()
 
     lis =Question.objects.order_by("question_text")
-    dic = {"QUESTIONS": lis}
-    return render(request,'index.html',{'form': form})
 
-def review(request):
-    lis=Question.objects.order_by("question_text")
+    return render(request,'index.html',{'form': form,"QUESTIONS": lis})
+
+def review(request): 
+    lis=Question.objects.all()
     dic={"QUESTIONS":lis}
     return render(request, 'review.html', context=dic)
 # Create your views here.
@@ -106,7 +107,7 @@ def register(request):
 
 def user_login(request):
     if request.method == 'POST':
-        username = request.POST.get('username') #this get will grab it from the HTML
+        username = request.POST.get('username')
         password = request.POST.get('password')
         user = authenticate(username=username, password=password) #user is a boolean that tells us if it is authenticated or not
         if user:

@@ -16,6 +16,32 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from test1 import views
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+admin.site.site_header = 'FeedBack System Admin'                    # default: "Django Administration"
+admin.site.index_title = 'Features area'                 # default: "Site administration"
+admin.site.site_title = 'Admin Site' # default: "Django site admin"
+
 urlpatterns = [
     path('', views.index,name='index'),
     path('review/', views.review),

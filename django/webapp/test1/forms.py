@@ -20,3 +20,8 @@ class Ratings(forms.ModelForm):
     class Meta():
         model=Rating
         fields = ('question','feedback',)
+
+        widgets = {
+
+            'feedback': forms.Textarea(attrs={'class': 'form-control', 'rows': 5, 'cols': 10}),
+        }
