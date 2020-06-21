@@ -25,7 +25,7 @@ Create SuperUser
 py manage.py createsuperuser
 ```
 enter username and password for super usert you want to create and proceed as instructed.
-##Running Server
+## Running Server
 ```
 py manage.py runserver
 ```
@@ -50,7 +50,7 @@ open browser and go to [http://localhost:8000/](http://localhost:8000/) to go to
 ![response page](django/webapp/images/register2.png)
 
 ---
-##ADMIN SITE
+## ADMIN SITE
 if you are an admin you can go to admin site
 ![response page](django/webapp/images/register3.png)
 
