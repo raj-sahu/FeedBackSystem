@@ -32,56 +32,56 @@ py manage.py runserver
 open browser and go to [http://localhost:8000/](http://localhost:8000/) to go to homepage of hosted website.
 
 ---
-![home page](images/logo.png)
+![home page](django/webapp/images/logo.png)
 >Click on register button to add a new user
 
-![register page](images/register.png)
+![register page](django/webapp/images/register.png)
 
 >Fill The Form Correctly And Register
 
-![register page1](images/register1.png)
+![register page1](django/webapp/images/register1.png)
 
 >Go to Login Page and login
 
-![login page](images/logo1.png)
+![login page](django/webapp/images/logo1.png)
 
 >make Entries on the Service You Use 
 
-![response page](images/register2.png)
+![response page](django/webapp/images/register2.png)
 
 ---
 ##ADMIN SITE
 if you are an admin you can go to admin site
-![response page](images/register3.png)
+![response page](django/webapp/images/register3.png)
 
 >if You are not logged in Log in
 
-![admin page](images/register4.png)
+![admin page](django/webapp/images/register4.png)
 
 >once login as admin admin:
 
-![admin page](images/register8.png)
+![admin page](django/webapp/images/register8.png)
 
 >In the features area we have a question section to add Existing Questions.
 
-![admin page](images/register6.png)
+![admin page](django/webapp/images/register6.png)
 
 >In the festures area we also have a rating section to veiw ratings provided by user.
 
-![admin page](images/register7.png)
+![admin page](django/webapp/images/register7.png)
 
 >Question Section
 
-![admin page](images/1.png)
+![admin page](django/webapp/images/1.png)
 
 >Ratings Section
 
-![admin page](images/2.png)
+![admin page](django/webapp/images/2.png)
 
 >one can logout of the site through logout button in navigation bar. 
 ---
 
-##Technology Used to Build
+## Technology Used to Build
 
 
 - Html
